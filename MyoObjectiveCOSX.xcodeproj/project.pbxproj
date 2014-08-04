@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A5AC69E21990549A00167C0B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AC69E11990549A00167C0B /* Cocoa.framework */; };
+		A5AC69EC1990549A00167C0B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5AC69EA1990549A00167C0B /* InfoPlist.strings */; };
+		A5AC69EE1990549A00167C0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5AC69ED1990549A00167C0B /* main.m */; };
+		A5AC69F21990549A00167C0B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A5AC69F01990549A00167C0B /* Credits.rtf */; };
+		A5AC69F51990549A00167C0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5AC69F41990549A00167C0B /* AppDelegate.m */; };
+		A5AC69F81990549A00167C0B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5AC69F61990549A00167C0B /* MainMenu.xib */; };
+		A5AC69FA1990549A00167C0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5AC69F91990549A00167C0B /* Images.xcassets */; };
+		A5AC6A011990549B00167C0B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AC6A001990549B00167C0B /* XCTest.framework */; };
+		A5AC6A021990549B00167C0B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AC69E11990549A00167C0B /* Cocoa.framework */; };
+		A5AC6A0A1990549B00167C0B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5AC6A081990549B00167C0B /* InfoPlist.strings */; };
+		A5AC6A0C1990549B00167C0B /* MyoObjectiveCOSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5AC6A0B1990549B00167C0B /* MyoObjectiveCOSXTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5AC6A031990549B00167C0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5AC69D61990549A00167C0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5AC69DD1990549A00167C0B;
+			remoteInfo = MyoObjectiveCOSX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A5AC69DE1990549A00167C0B /* MyoObjectiveCOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyoObjectiveCOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5AC69E11990549A00167C0B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		A5AC69E41990549A00167C0B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		A5AC69E51990549A00167C0B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A5AC69E61990549A00167C0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A5AC69E91990549A00167C0B /* MyoObjectiveCOSX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyoObjectiveCOSX-Info.plist"; sourceTree = "<group>"; };
+		A5AC69EB1990549A00167C0B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A5AC69ED1990549A00167C0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A5AC69EF1990549A00167C0B /* MyoObjectiveCOSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyoObjectiveCOSX-Prefix.pch"; sourceTree = "<group>"; };
+		A5AC69F11990549A00167C0B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		A5AC69F31990549A00167C0B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A5AC69F41990549A00167C0B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A5AC69F71990549A00167C0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		A5AC69F91990549A00167C0B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A5AC69FF1990549B00167C0B /* MyoObjectiveCOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyoObjectiveCOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5AC6A001990549B00167C0B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A5AC6A071990549B00167C0B /* MyoObjectiveCOSXTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyoObjectiveCOSXTests-Info.plist"; sourceTree = "<group>"; };
+		A5AC6A091990549B00167C0B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A5AC6A0B1990549B00167C0B /* MyoObjectiveCOSXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyoObjectiveCOSXTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5AC69DB1990549A00167C0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5AC69E21990549A00167C0B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5AC69FC1990549B00167C0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5AC6A021990549B00167C0B /* Cocoa.framework in Frameworks */,
+				A5AC6A011990549B00167C0B /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5AC69D51990549A00167C0B = {
+			isa = PBXGroup;
+			children = (
+				A5AC69E71990549A00167C0B /* MyoObjectiveCOSX */,
+				A5AC6A051990549B00167C0B /* MyoObjectiveCOSXTests */,
+				A5AC69E01990549A00167C0B /* Frameworks */,
+				A5AC69DF1990549A00167C0B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5AC69DF1990549A00167C0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5AC69DE1990549A00167C0B /* MyoObjectiveCOSX.app */,
+				A5AC69FF1990549B00167C0B /* MyoObjectiveCOSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5AC69E01990549A00167C0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5AC69E11990549A00167C0B /* Cocoa.framework */,
+				A5AC6A001990549B00167C0B /* XCTest.framework */,
+				A5AC69E31990549A00167C0B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5AC69E31990549A00167C0B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5AC69E41990549A00167C0B /* AppKit.framework */,
+				A5AC69E51990549A00167C0B /* CoreData.framework */,
+				A5AC69E61990549A00167C0B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		A5AC69E71990549A00167C0B /* MyoObjectiveCOSX */ = {
+			isa = PBXGroup;
+			children = (
+				A5AC69F31990549A00167C0B /* AppDelegate.h */,
+				A5AC69F41990549A00167C0B /* AppDelegate.m */,
+				A5AC69F61990549A00167C0B /* MainMenu.xib */,
+				A5AC69F91990549A00167C0B /* Images.xcassets */,
+				A5AC69E81990549A00167C0B /* Supporting Files */,
+			);
+			path = MyoObjectiveCOSX;
+			sourceTree = "<group>";
+		};
+		A5AC69E81990549A00167C0B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5AC69E91990549A00167C0B /* MyoObjectiveCOSX-Info.plist */,
+				A5AC69EA1990549A00167C0B /* InfoPlist.strings */,
+				A5AC69ED1990549A00167C0B /* main.m */,
+				A5AC69EF1990549A00167C0B /* MyoObjectiveCOSX-Prefix.pch */,
+				A5AC69F01990549A00167C0B /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5AC6A051990549B00167C0B /* MyoObjectiveCOSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5AC6A0B1990549B00167C0B /* MyoObjectiveCOSXTests.m */,
+				A5AC6A061990549B00167C0B /* Supporting Files */,
+			);
+			path = MyoObjectiveCOSXTests;
+			sourceTree = "<group>";
+		};
+		A5AC6A061990549B00167C0B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5AC6A071990549B00167C0B /* MyoObjectiveCOSXTests-Info.plist */,
+				A5AC6A081990549B00167C0B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5AC69DD1990549A00167C0B /* MyoObjectiveCOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5AC6A0F1990549B00167C0B /* Build configuration list for PBXNativeTarget "MyoObjectiveCOSX" */;
+			buildPhases = (
+				A5AC69DA1990549A00167C0B /* Sources */,
+				A5AC69DB1990549A00167C0B /* Frameworks */,
+				A5AC69DC1990549A00167C0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyoObjectiveCOSX;
+			productName = MyoObjectiveCOSX;
+			productReference = A5AC69DE1990549A00167C0B /* MyoObjectiveCOSX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A5AC69FE1990549B00167C0B /* MyoObjectiveCOSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5AC6A121990549B00167C0B /* Build configuration list for PBXNativeTarget "MyoObjectiveCOSXTests" */;
+			buildPhases = (
+				A5AC69FB1990549B00167C0B /* Sources */,
+				A5AC69FC1990549B00167C0B /* Frameworks */,
+				A5AC69FD1990549B00167C0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5AC6A041990549B00167C0B /* PBXTargetDependency */,
+			);
+			name = MyoObjectiveCOSXTests;
+			productName = MyoObjectiveCOSXTests;
+			productReference = A5AC69FF1990549B00167C0B /* MyoObjectiveCOSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5AC69D61990549A00167C0B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Remi Santos";
+				TargetAttributes = {
+					A5AC69FE1990549B00167C0B = {
+						TestTargetID = A5AC69DD1990549A00167C0B;
+					};
+				};
+			};
+			buildConfigurationList = A5AC69D91990549A00167C0B /* Build configuration list for PBXProject "MyoObjectiveCOSX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5AC69D51990549A00167C0B;
+			productRefGroup = A5AC69DF1990549A00167C0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5AC69DD1990549A00167C0B /* MyoObjectiveCOSX */,
+				A5AC69FE1990549B00167C0B /* MyoObjectiveCOSXTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5AC69DC1990549A00167C0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5AC69EC1990549A00167C0B /* InfoPlist.strings in Resources */,
+				A5AC69FA1990549A00167C0B /* Images.xcassets in Resources */,
+				A5AC69F21990549A00167C0B /* Credits.rtf in Resources */,
+				A5AC69F81990549A00167C0B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5AC69FD1990549B00167C0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5AC6A0A1990549B00167C0B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5AC69DA1990549A00167C0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5AC69F51990549A00167C0B /* AppDelegate.m in Sources */,
+				A5AC69EE1990549A00167C0B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5AC69FB1990549B00167C0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5AC6A0C1990549B00167C0B /* MyoObjectiveCOSXTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5AC6A041990549B00167C0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5AC69DD1990549A00167C0B /* MyoObjectiveCOSX */;
+			targetProxy = A5AC6A031990549B00167C0B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A5AC69EA1990549A00167C0B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5AC69EB1990549A00167C0B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A5AC69F01990549A00167C0B /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5AC69F11990549A00167C0B /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		A5AC69F61990549A00167C0B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5AC69F71990549A00167C0B /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		A5AC6A081990549B00167C0B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5AC6A091990549B00167C0B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A5AC6A0D1990549B00167C0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A5AC6A0E1990549B00167C0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A5AC6A101990549B00167C0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyoObjectiveCOSX/MyoObjectiveCOSX-Prefix.pch";
+				INFOPLIST_FILE = "MyoObjectiveCOSX/MyoObjectiveCOSX-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A5AC6A111990549B00167C0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyoObjectiveCOSX/MyoObjectiveCOSX-Prefix.pch";
+				INFOPLIST_FILE = "MyoObjectiveCOSX/MyoObjectiveCOSX-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A5AC6A131990549B00167C0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyoObjectiveCOSX.app/Contents/MacOS/MyoObjectiveCOSX";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyoObjectiveCOSX/MyoObjectiveCOSX-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MyoObjectiveCOSXTests/MyoObjectiveCOSXTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A5AC6A141990549B00167C0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyoObjectiveCOSX.app/Contents/MacOS/MyoObjectiveCOSX";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyoObjectiveCOSX/MyoObjectiveCOSX-Prefix.pch";
+				INFOPLIST_FILE = "MyoObjectiveCOSXTests/MyoObjectiveCOSXTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5AC69D91990549A00167C0B /* Build configuration list for PBXProject "MyoObjectiveCOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5AC6A0D1990549B00167C0B /* Debug */,
+				A5AC6A0E1990549B00167C0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5AC6A0F1990549B00167C0B /* Build configuration list for PBXNativeTarget "MyoObjectiveCOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5AC6A101990549B00167C0B /* Debug */,
+				A5AC6A111990549B00167C0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A5AC6A121990549B00167C0B /* Build configuration list for PBXNativeTarget "MyoObjectiveCOSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5AC6A131990549B00167C0B /* Debug */,
+				A5AC6A141990549B00167C0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5AC69D61990549A00167C0B /* Project object */;
+}
