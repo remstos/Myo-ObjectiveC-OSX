@@ -67,8 +67,8 @@
 		A5AC6A091990549B00167C0B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A5AC6A0B1990549B00167C0B /* MyoObjectiveCOSXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyoObjectiveCOSXTests.m; sourceTree = "<group>"; };
 		A5AC6A15199054CD00167C0B /* myo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = myo.framework; sourceTree = "<group>"; };
-		A5AC6A17199054DE00167C0B /* MyoObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyoObjectiveC.h; sourceTree = "<group>"; };
-		A5AC6A18199054DE00167C0B /* MyoObjectiveC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyoObjectiveC.mm; sourceTree = "<group>"; };
+		A5AC6A17199054DE00167C0B /* MyoObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyoObjectiveC.h; path = ../MyoObjectiveC.h; sourceTree = "<group>"; };
+		A5AC6A18199054DE00167C0B /* MyoObjectiveC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MyoObjectiveC.mm; path = ../MyoObjectiveC.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,9 +138,9 @@
 			children = (
 				A5AC69F31990549A00167C0B /* AppDelegate.h */,
 				A5AC69F41990549A00167C0B /* AppDelegate.m */,
-				A5AC69F61990549A00167C0B /* MainMenu.xib */,
 				A5AC6A17199054DE00167C0B /* MyoObjectiveC.h */,
 				A5AC6A18199054DE00167C0B /* MyoObjectiveC.mm */,
+				A5AC69F61990549A00167C0B /* MainMenu.xib */,
 				A5AC69F91990549A00167C0B /* Images.xcassets */,
 				A5AC69E81990549A00167C0B /* Supporting Files */,
 			);
@@ -503,6 +503,7 @@
 				A5AC6A111990549B00167C0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5AC6A121990549B00167C0B /* Build configuration list for PBXNativeTarget "MyoObjectiveCOSXTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +512,7 @@
 				A5AC6A141990549B00167C0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
