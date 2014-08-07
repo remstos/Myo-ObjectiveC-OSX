@@ -18,6 +18,9 @@
 		A5AC6A021990549B00167C0B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AC69E11990549A00167C0B /* Cocoa.framework */; };
 		A5AC6A0A1990549B00167C0B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5AC6A081990549B00167C0B /* InfoPlist.strings */; };
 		A5AC6A0C1990549B00167C0B /* MyoObjectiveCOSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5AC6A0B1990549B00167C0B /* MyoObjectiveCOSXTests.m */; };
+		A5AC6A16199054CD00167C0B /* myo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5AC6A15199054CD00167C0B /* myo.framework */; };
+		A5AC6A19199054DE00167C0B /* MyoObjectiveC.mm in Sources */ = {isa = PBXBuildFile; fileRef = A5AC6A18199054DE00167C0B /* MyoObjectiveC.mm */; };
+		A5AC6A1D199054FF00167C0B /* myo.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5AC6A15199054CD00167C0B /* myo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,19 @@
 			remoteInfo = MyoObjectiveCOSX;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A5AC6A1C199054EF00167C0B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A5AC6A1D199054FF00167C0B /* myo.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A5AC69DE1990549A00167C0B /* MyoObjectiveCOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyoObjectiveCOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +66,9 @@
 		A5AC6A071990549B00167C0B /* MyoObjectiveCOSXTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyoObjectiveCOSXTests-Info.plist"; sourceTree = "<group>"; };
 		A5AC6A091990549B00167C0B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A5AC6A0B1990549B00167C0B /* MyoObjectiveCOSXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyoObjectiveCOSXTests.m; sourceTree = "<group>"; };
+		A5AC6A15199054CD00167C0B /* myo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = myo.framework; sourceTree = "<group>"; };
+		A5AC6A17199054DE00167C0B /* MyoObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyoObjectiveC.h; sourceTree = "<group>"; };
+		A5AC6A18199054DE00167C0B /* MyoObjectiveC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyoObjectiveC.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5AC6A16199054CD00167C0B /* myo.framework in Frameworks */,
 				A5AC69E21990549A00167C0B /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +115,7 @@
 		A5AC69E01990549A00167C0B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5AC6A15199054CD00167C0B /* myo.framework */,
 				A5AC69E11990549A00167C0B /* Cocoa.framework */,
 				A5AC6A001990549B00167C0B /* XCTest.framework */,
 				A5AC69E31990549A00167C0B /* Other Frameworks */,
@@ -118,6 +139,8 @@
 				A5AC69F31990549A00167C0B /* AppDelegate.h */,
 				A5AC69F41990549A00167C0B /* AppDelegate.m */,
 				A5AC69F61990549A00167C0B /* MainMenu.xib */,
+				A5AC6A17199054DE00167C0B /* MyoObjectiveC.h */,
+				A5AC6A18199054DE00167C0B /* MyoObjectiveC.mm */,
 				A5AC69F91990549A00167C0B /* Images.xcassets */,
 				A5AC69E81990549A00167C0B /* Supporting Files */,
 			);
@@ -164,6 +187,7 @@
 				A5AC69DA1990549A00167C0B /* Sources */,
 				A5AC69DB1990549A00167C0B /* Frameworks */,
 				A5AC69DC1990549A00167C0B /* Resources */,
+				A5AC6A1C199054EF00167C0B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -254,6 +278,7 @@
 			files = (
 				A5AC69F51990549A00167C0B /* AppDelegate.m in Sources */,
 				A5AC69EE1990549A00167C0B /* main.m in Sources */,
+				A5AC6A19199054DE00167C0B /* MyoObjectiveC.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,9 +411,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyoObjectiveCOSX/MyoObjectiveCOSX-Prefix.pch";
 				INFOPLIST_FILE = "MyoObjectiveCOSX/MyoObjectiveCOSX-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -399,9 +430,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyoObjectiveCOSX/MyoObjectiveCOSX-Prefix.pch";
 				INFOPLIST_FILE = "MyoObjectiveCOSX/MyoObjectiveCOSX-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

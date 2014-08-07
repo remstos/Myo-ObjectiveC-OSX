@@ -7,8 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+#import "MyoObjectiveC.h"
+@interface AppDelegate : NSObject <NSApplicationDelegate, MyoDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 
