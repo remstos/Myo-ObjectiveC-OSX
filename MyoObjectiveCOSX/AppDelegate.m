@@ -56,15 +56,16 @@
 }
 -(void)myo:(Myo *)myo onOrientationDataWithRoll:(int)roll pitch:(int)pitch yaw:(int)yaw
 {
-    NSLog(@"Myo on orientation data");
+//    NSLog(@"Myo on orientation data");
 }
 -(void)myo:(Myo *)myo onRssi:(int8_t)rssi
 {
     NSLog(@"Myo on rssi");
 }
--(void)myo:(id)myo onPose:(MyoPose *)pose
+-(void)myo:(Myo *)myo onPose:(MyoPose *)pose
 {
     NSLog(@"posed : %u",pose.poseType);
+    [myo vibrateWithType:MyoVibrationTypeShort];
 }
 
 @end
