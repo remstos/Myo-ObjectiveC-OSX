@@ -46,11 +46,11 @@
     NSLog(@"Myo on pair");
 }
 
--(void)myo:(Myo *)myo onAccelerometerDataWithVector:(float)vector
+-(void)myo:(Myo *)myo onAccelerometerDataWithVector:(MyoVector*)vector
 {
     NSLog(@"Myo on accelerometer data");
 }
--(void)myo:(Myo *)myo onGyroscopeDataWithVector:(float)vector
+-(void)myo:(Myo *)myo onGyroscopeDataWithVector:(MyoVector*)vector
 {
     NSLog(@"Myo on gyroscope data");
 }

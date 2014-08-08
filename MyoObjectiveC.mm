@@ -41,18 +41,18 @@ public:
     
     void onAccelerometerData(Myo* myo, uint64_t timestamp, const myo::Vector3<float>& accel)
     {
-        float magnitude = accel.magnitude();
+        MyoVector *vector = [[MyoVector alloc] initWithX:accel.x() y:accel.y() z:accel.z()];
         if ([_myo.delegate respondsToSelector:@selector(myo:onAccelerometerDataWithVector:)]) {
-            [_myo.delegate myo:_myo onAccelerometerDataWithVector:magnitude];
+            [_myo.delegate myo:_myo onAccelerometerDataWithVector:vector];
         }
     }
     
     /// Called when a paired Myo has provided new gyroscope data in units of deg/s.
     void onGyroscopeData(Myo* myo, uint64_t timestamp, const myo::Vector3<float>& gyro)
     {
-        float magnitude = gyro.magnitude();
+        MyoVector *vector = [[MyoVector alloc] initWithX:gyro.x() y:gyro.y() z:gyro.z()];
         if ([_myo.delegate respondsToSelector:@selector(myo:onGyroscopeDataWithVector:)]) {
-            [_myo.delegate myo:_myo onGyroscopeDataWithVector:magnitude];
+            [_myo.delegate myo:_myo onGyroscopeDataWithVector:vector];
         }
     }
     

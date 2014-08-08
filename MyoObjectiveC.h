@@ -53,8 +53,8 @@ typedef enum MyoPoseType {
 -(void)myoOnDisconnect:(Myo*)myo;
 -(void)myo:(Myo*)myo onPose:(MyoPose *)pose;
 -(void)myo:(Myo*)myo onOrientationDataWithRoll:(int)roll pitch:(int)pitch yaw:(int)yaw;
--(void)myo:(Myo*)myo onAccelerometerDataWithVector:(float)vector;
--(void)myo:(Myo*)myo onGyroscopeDataWithVector:(float)vector;
+-(void)myo:(Myo*)myo onAccelerometerDataWithVector:(MyoVector*)vector;
+-(void)myo:(Myo*)myo onGyroscopeDataWithVector:(MyoVector*)vector;
 -(void)myo:(Myo*)myo onRssi:(int8_t)rssi;
 @end
 
