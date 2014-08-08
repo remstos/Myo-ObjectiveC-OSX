@@ -5,3 +5,29 @@ Objective-C wrapper for the c++ Myo OS X sdk
 
 
 *You need to add the myo.framework to the project*
+
+
+## Get started
+
+##### Init and connect Myo
+```
+    Myo *newMyo = [[Myo alloc] initWithApplicationIdentifier:@"com.example.myoobjc"];
+    
+    BOOL found = false;
+    while (!found) {
+        found = [newMyo connectMyoWaiting:10000];
+    }
+    newMyo.updateTime = 1000;
+    [newMyo startUpdate];
+```
+
+##### MyoDelegate
+```
+@interface ViewController : UIViewController <MyoDelegate>
+```
+
+And implement delegate methods
+
+```
+-(void)myo:(Myo *)myo onPose:(MyoPose *)pose {}
+```
