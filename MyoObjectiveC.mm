@@ -8,16 +8,22 @@
 
 #import "MyoObjectiveC.h"
 #import <myo/myo.hpp>
+
+
 @class Myo;
 
+
 class DataCollector : public myo::DeviceListener {
+    
 public:
-    DataCollector()
-    : onArm(false), roll_w(0), pitch_w(0), yaw_w(0), currentPose()
-    {
+    
+    DataCollector() : onArm(false), roll_w(0), pitch_w(0), yaw_w(0), currentPose() {
+        
+        //
     }
-    void onOrientationData(myo::Myo* myo, uint64_t timestamp, const myo::Quaternion<float>& quat)
-    {
+    
+    void onOrientationData(myo::Myo *myo, uint64_t timestamp, const myo::Quaternion<float>&quat) {
+        
         using std::atan2;
         using std::asin;
         using std::sqrt;
@@ -39,8 +45,8 @@ public:
             }
     }
     
-    void onAccelerometerData(Myo* myo, uint64_t timestamp, const myo::Vector3<float>& accel)
-    {
+    void onAccelerometerData(Myo *myo, uint64_t timestamp, const myo::Vector3<float>&accel) {
+        
         MyoVector *vector = [[MyoVector alloc] initWithX:accel.x() y:accel.y() z:accel.z()];
         if ([_myo.delegate respondsToSelector:@selector(myo:onAccelerometerDataWithVector:)]) {
             [_myo.delegate myo:_myo onAccelerometerDataWithVector:vector];
@@ -48,8 +54,8 @@ public:
     }
     
     /// Called when a paired Myo has provided new gyroscope data in units of deg/s.
-    void onGyroscopeData(Myo* myo, uint64_t timestamp, const myo::Vector3<float>& gyro)
-    {
+    void onGyroscopeData(Myo *myo, uint64_t timestamp, const myo::Vector3<float>&gyro) {
+        
         MyoVector *vector = [[MyoVector alloc] initWithX:gyro.x() y:gyro.y() z:gyro.z()];
         if ([_myo.delegate respondsToSelector:@selector(myo:onGyroscopeDataWithVector:)]) {
             [_myo.delegate myo:_myo onGyroscopeDataWithVector:vector];
@@ -58,74 +64,80 @@ public:
     
     /// Called when a paired Myo has provided a new RSSI value.
     /// @see Myo::requestRssi() to request an RSSI value from the Myo.
-    void onRssi(Myo* myo, uint64_t timestamp, int8_t rssi)
-    {
+    void onRssi(Myo *myo, uint64_t timestamp, int8_t rssi) {
+        
         if ([_myo.delegate respondsToSelector:@selector(myo:onRssi:)]) {
             [_myo.delegate myo:_myo onRssi:rssi];
         }
     }
     
-    void onPose(myo::Myo* myo, uint64_t timestamp, myo::Pose pose)
-    {
+    void onPose(myo::Myo *myo, uint64_t timestamp, myo::Pose pose) {
+        
         currentPose = pose;
-//        print();
+        
         MyoPose *myopose = [MyoPose new];
+        if (pose.type() == myo::Pose::rest)
+            myopose.poseType = MyoPoseTypeRest;
         if (pose.type() == myo::Pose::fist)
             myopose.poseType = MyoPoseTypeFist;
-        if (pose.type() == myo::Pose::fingersSpread)
-            myopose.poseType = MyoPoseTypeFingersSpread;
         if (pose.type() == myo::Pose::waveIn)
             myopose.poseType = MyoPoseTypeWaveIn;
         if (pose.type() == myo::Pose::waveOut)
             myopose.poseType = MyoPoseTypeWaveOut;
+        if (pose.type() == myo::Pose::reserved1)
+            myopose.poseType = MyoPoseTypeReserved1;
+        if (pose.type() == myo::Pose::fingersSpread)
+            myopose.poseType = MyoPoseTypeFingersSpread;
         if (pose.type() == myo::Pose::thumbToPinky)
-            myopose.poseType = MyoPoseTypeThumbToPinky;
+            myopose.poseType = MyoPoseTypePinkyToThumb;
         if ([_myo.delegate respondsToSelector:@selector(myo:onPose:)]) {
             [_myo.delegate myo:_myo onPose:myopose];
         }
     }
-    void onArmRecognized(myo::Myo* myo, uint64_t timestamp, myo::Arm arm, myo::XDirection xDirection)
-    {
+    
+    void onArmRecognized(myo::Myo *myo, uint64_t timestamp, myo::Arm arm, myo::XDirection xDirection) {
+        
         onArm = true;
         whichArm = arm;
         if ([_myo.delegate respondsToSelector:@selector(myoOnArmRecognized:)]) {
             [_myo.delegate myoOnArmRecognized:_myo];
         }
     }
-    void onArmLost(myo::Myo* myo, uint64_t timestamp)
-    {
+    
+    void onArmLost(myo::Myo *myo, uint64_t timestamp) {
+        
         onArm = false;
         if ([_myo.delegate respondsToSelector:@selector(myoOnArmLost:)]) {
             [_myo.delegate myoOnArmLost:_myo];
         }
     }
     
-    void onPair(Myo* myo, uint64_t timestamp, myo::FirmwareVersion firmwareVersion)
-    {
+    void onPair(Myo *myo, uint64_t timestamp, myo::FirmwareVersion firmwareVersion) {
+        
         if ([_myo.delegate respondsToSelector:@selector(myoOnPair:)]) {
             [_myo.delegate myoOnPair:_myo];
         }
     }
     
     /// Called when a paired Myo has been connected.
-    void onConnect(Myo* myo, uint64_t timestamp, myo::FirmwareVersion firmwareVersion)
-    {
+    void onConnect(Myo *myo, uint64_t timestamp, myo::FirmwareVersion firmwareVersion) {
+        
         if ([_myo.delegate respondsToSelector:@selector(myoOnConnect:)]) {
             [_myo.delegate myoOnConnect:_myo];
         }
     }
     
     /// Called when a paired Myo has been disconnected.
-    void onDisconnect(Myo* myo, uint64_t timestamp)
-    {
+    void onDisconnect(Myo *myo, uint64_t timestamp) {
+        
         if ([_myo.delegate respondsToSelector:@selector(myoOnDisconnect:)]) {
             [_myo.delegate myoOnDisconnect:_myo];
         }
     }
     
     
-    void print()
-    {
+    void print() {
+        
         // Clear the current line
         std::cout << '\r';
         std::cout << '[' << std::string(roll_w, '*') << std::string(18 - roll_w, ' ') << ']'
@@ -144,6 +156,7 @@ public:
         std::cout << std::flush;
     }
     
+    
     // These values are set by onArmRecognized() and onArmLost() above.
     bool onArm;
     myo::Arm whichArm;
@@ -154,20 +167,24 @@ public:
     Myo *_myo;
 };
 
+
 #define DEFAULT_UPDATE_TIME 100
 #pragma mark - MYOPOSE
 @implementation MyoPose
 
 @end
 
+
 #pragma mark - MYOVECTOR
 @implementation MyoVector
--(id)init
-{
+
+- (id)init {
+    
     return [self initWithX:0 y:0 z:0];
 }
-- (instancetype)initWithX:(float)x y:(float)y z:(float)z
-{
+
+- (instancetype)initWithX:(float)x y:(float)y z:(float)z {
+    
     self = [super init];
     if (self) {
         _data[0] = x;
@@ -176,56 +193,65 @@ public:
     }
     return self;
 }
--(float)x
-{
+
+- (float)x {
+    
     return _data[0];
 }
+
 -(float)y
 {
     return _data[1];
 }
--(float)z
-{
+
+- (float)z {
+    
     return _data[2];
 }
--(float)magnitude
-{
+
+- (float)magnitude {
+    
     return std::sqrt(self.x * self.x + self.y * self.y + self.z * self.z);
 }
--(float)productWithVector:(MyoVector*)rhs
-{
+
+- (float)productWithVector:(MyoVector *)rhs {
+    
     return self.x * self.x + self.y * self.y + self.z * self.z;
 }
--(MyoVector*)normalized
-{
+
+- (MyoVector *)normalized {
+    
     float norm = self.magnitude;
     return [[MyoVector alloc] initWithX:(self.x / norm) y:(self.y / norm) z:(self.z / norm)];
 }
--(MyoVector*)crossProductWithVector:(MyoVector*)rhs
-{
+
+- (MyoVector *)crossProductWithVector:(MyoVector *)rhs {
+    
     float x = self.x * rhs.y - self.y * rhs.x;
     float y = self.y * rhs.z - self.z * rhs.y;
     float z = self.z * rhs.x - self.x * rhs.z;
     return [[MyoVector alloc] initWithX:x y:y z:z];
 }
--(float)angleWithVector:(MyoVector *)rhs
-{
+
+- (float)angleWithVector:(MyoVector *)rhs {
+    
     return std::acos([self productWithVector:rhs] / (self.magnitude * rhs.magnitude));
 }
+
 @end
 
+
 #pragma mark - MYO
-
-
-@implementation Myo{
+@implementation Myo {
+    
     myo::Hub hub;
-    myo::Myo* myo;
+    myo::Myo *myo;
     DataCollector collector;
     BOOL update;
 }
 
-- (instancetype)initWithApplicationIdentifier:(NSString*)identifier
-{
+- (instancetype)initWithApplicationIdentifier:(NSString *)identifier {
+    
     self = [super init];
     if (self) {
         myo::Hub hub([identifier UTF8String]);
@@ -234,8 +260,8 @@ public:
     return self;
 }
 
--(BOOL)connectMyoWaiting:(int)milliseconds
-{
+- (BOOL)connectMyoWaiting:(int)milliseconds {
+    
     myo = hub.waitForMyo(milliseconds);
   
     if (!myo) {
@@ -247,25 +273,25 @@ public:
     return true;
 }
 
--(void)startUpdate
-{
+- (void)startUpdate {
+    
     update = true;
-    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
         //Background Thread
         while (update) {
             hub.run(_updateTime);
-//            collector.print();
         }
-        dispatch_async(dispatch_get_main_queue(), ^(void){
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
             //Run UI Updates
         });
     });
 }
--(void)stopUpdate {
+- (void)stopUpdate {
+    
     update = false;
 }
 
--(void)vibrateWithType:(MyoVibrationType)type {
+- (void)vibrateWithType:(MyoVibrationType)type {
     
     switch (type) {
         case MyoVibrationTypeShort:
@@ -280,4 +306,26 @@ public:
     }
     
 }
+
+- (NSString *)poseName:(MyoPose *)pose {
+    
+    if (pose.poseType == MyoPoseTypeRest) {
+        return @"Rest";
+    } else if (pose.poseType == MyoPoseTypeFist) {
+        return @"Fist";
+    } else if (pose.poseType == MyoPoseTypeFingersSpread) {
+        return @"Fingers Spread";
+    } else if (pose.poseType == MyoPoseTypeWaveIn) {
+        return @"Wave In";
+    } else if (pose.poseType == MyoPoseTypeWaveOut) {
+        return @"Wave Out";
+    } else if (pose.poseType == MyoPoseTypeReserved1) {
+        return @"Reserved 1";
+    } else if (pose.poseType == MyoPoseTypePinkyToThumb) {
+        return @"Pinky To Thumb";
+    } else {
+        return @"Unrecognised";
+    }
+}
+
 @end
