@@ -22,6 +22,18 @@ typedef enum MyoPoseType {
 @property (nonatomic)MyoPoseType poseType;
 @end
 
+
+typedef enum MyoArmType {
+    MyoArmTypeRight = 0,
+    MyoArmTypeLeft,
+    MyoArmTypeUnknown
+} MyoArmType;
+
+@interface MyoArm : NSObject
+@property (nonatomic)MyoArmType armType;
+@end
+
+
 @interface MyoVector : NSObject
 {
     float _data[3];
@@ -48,6 +60,7 @@ typedef enum MyoPoseType {
 @optional
 -(void)myoOnArmLost:(Myo*)myo;
 -(void)myoOnArmRecognized:(Myo*)myo;
+-(void)myoOnArmRecognized:(Myo*)myo arm:(MyoArm*)arm;
 -(void)myoOnPair:(Myo*)myo;
 -(void)myoOnConnect:(Myo*)myo;
 -(void)myoOnDisconnect:(Myo*)myo;
