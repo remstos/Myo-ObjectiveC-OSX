@@ -16,7 +16,7 @@ typedef enum MyoPoseType {
     MyoPoseTypeFingersSpread = 1,
     MyoPoseTypeWaveIn = 2,
     MyoPoseTypeWaveOut = 3,
-    MyoPoseTypeThumbToPinky = 4
+    MyoPoseTypeDoubleTap = 4
 } MyoPoseType;
 @interface MyoPose : NSObject
 @property (nonatomic)MyoPoseType poseType;

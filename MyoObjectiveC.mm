@@ -78,8 +78,8 @@ public:
             myopose.poseType = MyoPoseTypeWaveIn;
         if (pose.type() == myo::Pose::waveOut)
             myopose.poseType = MyoPoseTypeWaveOut;
-        if (pose.type() == myo::Pose::thumbToPinky)
-            myopose.poseType = MyoPoseTypeThumbToPinky;
+        if (pose.type() == myo::Pose::doubleTap)
+            myopose.poseType = MyoPoseTypeDoubleTap;
         if ([_myo.delegate respondsToSelector:@selector(myo:onPose:)]) {
             [_myo.delegate myo:_myo onPose:myopose];
         }
